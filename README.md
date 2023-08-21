@@ -1,2 +1,2 @@
-# Fase2
-Fase 2 del Proyecto EBC
+# Fase1
+Fase 1 del Proyecto EBC
