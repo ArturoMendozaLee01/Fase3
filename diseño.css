@@ -1,0 +1,33 @@
+
+body{
+    background-color: white;
+    margin-left: 5px;    
+}
+
+header{
+    background-color: #04df88aa;
+    text-align: center;
+    color: white; 
+    margin-left: -5px;    
+}
+
+.a{
+    border: 0;    
+}
+
+.logo img{
+    width: 100%;
+}
+
+.text_mission p{
+    margin-left: 10px;
+}
+
+
+.pie{
+    background-color: #04df88aa;
+    margin-left: -5px;
+    text-align: center;    
+    color: white;         
+    padding: 1rem;           
+}
