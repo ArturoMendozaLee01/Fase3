@@ -1,33 +1,277 @@
-
-body{
-    background-color: white;
-    margin-left: 5px;    
+html{
+    scroll-behavior: smooth;
 }
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+h1{font-size: 3.7em;}
+h2{font-size: 2.5em;}
+h3{font-size: 2.0em;}
+h4{font-size: 1.75em;}
+p{font-size: 1em; font-weight: bolder;}  
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Aquí inicia el Header*/
 
 header{
+    display: flex;
+    height:90px;
     background-color: #04df88aa;
-    text-align: center;
-    color: white; 
-    margin-left: -5px;    
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    width: 100%;       
 }
 
-.a{
-    border: 0;    
+
+.logo{
+    display: flex;
+    align-items: center;
 }
 
 .logo img{
-    width: 100%;
+    height: 50px;
+    margin: 15px;
+    border-radius: 25%;            
 }
 
-.text_mission p{
+
+.logo h2{
+    color:aliceblue;    
+    font-size: 2.5rem;
     margin-left: 10px;
+    font-weight: bold;
+    display: flex;
+    margin: 15px;    
+}
+
+@nombre-empresa .h2{
+    @apply aos-fade-up;
+}
+
+.h2 {
+    @apply aos-fade-up;
+    @apply aos-delay-2000;
+    @apply aos-duration-5000;
+}
+
+menu{
+    display: flex;    
+}
+
+a{
+    text-decoration: none;
+    margin-right: 20px;
+    color: aliceblue;
+    font-weight: bold;    
+}
+
+a:hover{
+    color: aquamarine;
+}
+
+/* Aquí inicia el Home*/
+
+#home{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;    
+    color: aliceblue;
+    background-image:linear-gradient(
+        0deg, 
+        rgba(0, 0, 0, 0.5),        
+        rgba(0, 0, 0, 0.5)  
+    )
+    ,url("FondoByN.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+    background-attachment: fixed;   
+}
+
+/* Aquí inicia el Nosotros*/
+
+#nosotros .container{
+    display: flex;
+    justify-content:center;
+    padding: 100px 12px;
+}
+
+#nosotros h2{
+    padding: 1.5em;
+    color: aliceblue;    
+}
+
+#nosotros{
+    background-image:linear-gradient(
+        0deg, 
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5),        
+        rgba(0, 0, 0, 0.5)  
+    )
+    ,url("LogoPrototipo4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;       
+    display: flex;            
+}
+
+#nosotros p{
+    padding: 2em;
+    max-width: 1000px;
+    color: aliceblue;    
+}
+
+/* Aquí inicia Misión y Visión*/
+
+#mision{
+    background-color: rgb(30,30,30);
+    color: aliceblue;
+    text-align: center;
+    background-image:linear-gradient(
+        0deg, 
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5),        
+        rgba(0, 0, 0, 0.5)  
+    )
+    ,url("Alfarería6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;     
+}
+
+#mision .container{
+    padding: 100px 12px;
+
+}
+
+#mision h2{
+    margin-top: 0;    
+}
+
+#mision .mision-vision{
+    margin: 1em;
+    display: flex;
+}
+
+#mision .mision-vision .carta{
+    background-color: rgb(71, 70, 70);
+    display: block;
+    margin-left: 150px;    
+    border-radius: 5%;       
 }
 
 
-.pie{
-    background-color: #04df88aa;
-    margin-left: -5px;
-    text-align: center;    
-    color: white;         
-    padding: 1rem;           
+#mision p{
+    max-width: 300px;
+    margin-bottom: 15px;
+    margin-top: 15px;    
+}
+
+
+/* Aquí inicia Comprar*/
+
+#comprar{
+    padding: 200px 12px;    
+    color: aliceblue;
+    text-align: center;
+    background-image:linear-gradient(
+        0deg, 
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5),        
+        rgba(0, 0, 0, 0.5)  
+    )
+    ,url("Alfarería5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+    background-attachment: fixed;      
+    display: flex;
+}
+
+#comprar .container{
+    display: flex;
+    flex-direction: column;
+}
+
+#comprar h2{
+    margin: 15px; 
+    color: aquamarine;
+    margin-bottom: 130px;    
+}
+
+#comprar .maceta{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#comprar p{    
+    padding: 1em;        
+}
+
+#comprar p:hover{
+    color:#04df88aa;
+}
+
+#comprar img{
+    padding-top: 25px;    
+    filter: brightness(80%);
+    border-radius: 50%; 
+    width: 50%;
+}
+
+#comprar ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+
+/* Aquí inicia Contacto*/
+
+
+#contacto{
+    display: flex;
+    background-color:#04df88aa;     
+    color: aliceblue; 
+    justify-content: space-between;   
+}
+
+
+#contacto .container{
+    padding: 100px 12px;    
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;    
+}
+
+#contacto .direccion{
+    margin-left: 30px;
+    margin-right: 3em;
+}
+#contacto .gmaps{
+    margin-left: 3em;
+}
+
+#contacto .iconos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;                
+}
+
+
+/* footer */
+
+footer{
+    background-color:rgb(71, 70, 70);
+    color:aliceblue;       
 }
