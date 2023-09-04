@@ -1,2 +1,2 @@
-# Fase1
-Fase 1 del Proyecto EBC
+# Raíces Profundas
+Proyecto EBC
