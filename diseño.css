@@ -4,14 +4,14 @@ html{
 
 *{
     font-family: 'Poppins', sans-serif;
-    margin: 0;
+    margin: 0;    
 }
 
 h1{font-size: 3.7em;}
-h2{font-size: 2.5em;}
+h2{font-size: 2.5em; letter-spacing: 1.5px;}
 h3{font-size: 2.0em;}
-h4{font-size: 1.75em;}
-p{font-size: 1em; font-weight: bolder;}  
+h4{font-size: 1.5em;}
+p{font-size: 1em; font-weight: bolder; letter-spacing: 1px;}  
 
 .container{
     max-width: 1400px;
@@ -52,16 +52,6 @@ header{
     margin: 15px;    
 }
 
-@nombre-empresa .h2{
-    @apply aos-fade-up;
-}
-
-.h2 {
-    @apply aos-fade-up;
-    @apply aos-delay-2000;
-    @apply aos-duration-5000;
-}
-
 menu{
     display: flex;    
 }
@@ -74,7 +64,7 @@ a{
 }
 
 a:hover{
-    color: aquamarine;
+    color: rgb(71,70,70);    
 }
 
 /* Aquí inicia el Home*/
@@ -99,6 +89,8 @@ a:hover{
     background-attachment: fixed;   
 }
 
+
+
 /* Aquí inicia el Nosotros*/
 
 #nosotros .container{
@@ -109,26 +101,27 @@ a:hover{
 
 #nosotros h2{
     padding: 1.5em;
-    color: aliceblue;    
+    color: aliceblue;        
 }
 
 #nosotros{
     background-image:linear-gradient(
-        0deg, 
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5),        
+        0deg,
+        rgba(0, 0, 0, 0.5),    
+        rgba(0, 0, 0, 0.5),                          
         rgba(0, 0, 0, 0.5)  
     )
     ,url("LogoPrototipo4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;       
-    display: flex;            
+    display: flex; 
+    background-size: contain;           
 }
 
 #nosotros p{
     padding: 2em;
-    max-width: 1000px;
+    max-width: 800px;
     color: aliceblue;    
 }
 
@@ -160,22 +153,29 @@ a:hover{
 }
 
 #mision .mision-vision{
-    margin: 1em;
+    margin: 1.5em;
     display: flex;
+    justify-content:space-around;    
 }
 
 #mision .mision-vision .carta{
     background-color: rgb(71, 70, 70);
-    display: block;
-    margin-left: 150px;    
-    border-radius: 5%;       
+    display: block;        
+    /*margin-left: 200px;
+    margin-top: 50px;    */
+    border-radius: 5%;
+    border-color:#04df88aa;    
+    border-style:inset;    
 }
 
 
 #mision p{
-    max-width: 300px;
-    margin-bottom: 15px;
-    margin-top: 15px;    
+    max-width: 400px;
+    /*margin-bottom: 30px;
+    margin-top: 15px 15px;*/
+    text-align:left;
+    /*margin-left: 1em;   */
+    margin: 1em 1em;
 }
 
 
@@ -210,29 +210,44 @@ a:hover{
     margin-bottom: 130px;    
 }
 
-#comprar .maceta{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-#comprar p{    
-    padding: 1em;        
+.animar {
+    animation-name: fadeAndColorChange;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
-#comprar p:hover{
-    color:#04df88aa;
+@keyframes fadeAndColorChange {
+    0% {
+        opacity: 1;
+        color: aliceblue;
+    }
+    50% {
+        opacity: 0.5;
+        color: #04df88aa;
+    }
+    100% {
+        opacity: 1;
+        color: aliceblue;
+    }
 }
 
-#comprar img{
-    padding-top: 25px;    
-    filter: brightness(80%);
-    border-radius: 50%; 
-    width: 50%;
+
+/*
+#comprar .button{
+    background-color: #04df88aa;
+    border: 2px solid aliceblue;
+    border-radius: 10%; 
+    color: aliceblue;
+    font-size: 1em;  
+    max-width: fit-content;
+    padding: 5%;  
 }
 
-#comprar ul li{
-    list-style-type: none;
-    display: inline-block;
+*/
+
+button:hover{
+    color: rgb(71,70,70);    
 }
 
 
@@ -241,9 +256,9 @@ a:hover{
 
 #contacto{
     display: flex;
-    background-color:#04df88aa;     
-    color: aliceblue; 
-    justify-content: space-between;   
+    background-color:#059e61db;     
+    color: aliceblue;
+    justify-content: space-between;      
 }
 
 
@@ -251,7 +266,7 @@ a:hover{
     padding: 100px 12px;    
     display: flex;
     flex-direction: row;
-    margin: 0 auto;    
+    margin: 0 auto;     
 }
 
 #contacto .direccion{
@@ -267,6 +282,7 @@ a:hover{
     flex-direction: column;
     margin-left: 150px;                
 }
+
 
 
 /* footer */
