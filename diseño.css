@@ -210,6 +210,29 @@ a:hover{
     margin-bottom: 130px;    
 }
 
+.animar {
+    animation-name: fadeAndColorChange;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeAndColorChange {
+    0% {
+        opacity: 1;
+        color: aliceblue;
+    }
+    50% {
+        opacity: 0.5;
+        color: #04df88aa;
+    }
+    100% {
+        opacity: 1;
+        color: aliceblue;
+    }
+}
+
+
 /*
 #comprar .button{
     background-color: #04df88aa;
